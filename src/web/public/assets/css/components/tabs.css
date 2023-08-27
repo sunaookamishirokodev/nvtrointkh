@@ -1,0 +1,306 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  cursor: pointer !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer !important;
+  border-radius: 8px;
+}
+
+.tabs__panes#chinh-phu-dien-tu .tabs__item .tabs__text, .tabs__header .tabs__title {
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #0963cc;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  cursor: pointer !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer !important;
+  border-radius: 8px;
+}
+
+.tabs__panes#chinh-phu-dien-tu .tabs__item .tabs__text, .tabs__header .tabs__title {
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #0963cc;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+:before,
+:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.tabs {
+  margin-top: 20px;
+}
+.tabs__header {
+  display: flex;
+}
+.tabs__header .tabs__title {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex: 1;
+  height: 36px;
+  border: 1px solid #0963cc;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+}
+.tabs__header .tabs__title span {
+  margin: auto;
+}
+.tabs__header .tabs__title.active {
+  cursor: default;
+  color: #ffffff;
+  background-color: #0963cc;
+}
+.tabs__panes {
+  padding: 8px;
+  border: 1px solid #0963cc;
+  height: 455px;
+  display: none;
+}
+.tabs__panes.active {
+  display: block;
+}
+.tabs__panes#chinh-phu-dien-tu .tabs__item {
+  border: 1px solid #0963cc;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 6px 0;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+}
+.tabs__panes#chinh-phu-dien-tu .tabs__item:hover {
+  padding-left: 30px;
+}
+.tabs__panes#chinh-phu-dien-tu .tabs__item img {
+  width: 36px;
+}
+.tabs__panes#chinh-phu-dien-tu .tabs__item .tabs__text {
+  padding-left: 6px;
+}
+.tabs__panes#chinh-phu-dien-tu .tabs__item.tabs__item--bg-blue {
+  background: linear-gradient(#0963cc, #75b2f9);
+  background: -webkit-linear-gradient(#0963cc, #75b2f9);
+  background: -o-linear-gradient(#0963cc, #75b2f9);
+  background: -moz-linear-gradient(#0963cc, #75b2f9);
+  background: -ms-linear-gradient(#0963cc, #75b2f9);
+}
+.tabs__panes#chinh-phu-dien-tu .tabs__item.tabs__item--bg-blue .tabs__text {
+  color: #ffffff;
+}
+.tabs__panes#lich-cong-tac {
+  overflow: hidden scroll;
+}
+.tabs__panes#lich-cong-tac .scl__list {
+  border: 1px solid #f4f4f5;
+  padding: 4px;
+}
+.tabs__panes#lich-cong-tac .scl__list-title {
+  height: 36px;
+  line-height: 36px;
+  background-color: #137bf5;
+  border-radius: 2px;
+  padding-left: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tabs__panes#lich-cong-tac .scl__list-title i {
+  margin: 0 4px;
+}
+.tabs__panes#lich-cong-tac .scl__list .scl__item {
+  margin: 4px 0;
+  background-color: #f4f4f5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+}
+.tabs__panes#lich-cong-tac .scl__list .scl__item-title {
+  font-size: 16px;
+  margin-top: 4px;
+}
+.tabs__panes#lich-cong-tac .scl__list .scl__item-content {
+  font-size: 15px;
+}

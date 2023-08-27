@@ -1,0 +1,134 @@
+@import '../base/variables&mixins';
+@import '../base/base';
+
+.slider {
+  width: 104%;
+  height: calc($primary-height + 40px);
+  margin: auto;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+
+  &__list {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s ease-in-out;
+
+    .slider__item {
+      height: 290px;
+
+      img {
+        margin-right: 4px;
+        margin-bottom: 4px;
+        height: 92%;
+        object-fit: cover;
+      }
+
+      .slider__content {
+        margin-right: 4px;
+        height: 180px;
+        background-color: $secondary-color;
+
+        .slider__title {
+          @extend %slider-content;
+          text-transform: uppercase;
+          padding-top: 40px;
+          padding-bottom: 10px;
+
+          font: {
+            size: 14px;
+            weight: 600;
+            family: $primary-font;
+          }
+        }
+
+        .slider__create-day {
+          @extend %slider-content;
+          font-size: 14px;
+          font-family: $secondary-font;
+        }
+      }
+    }
+  }
+  .slider__dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      margin: 10px;
+      border-radius: 20px;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &.active {
+        width: 30px;
+
+      }
+    }
+  }
+}
+
+.subslider {
+  overflow: hidden scroll;
+  margin-left: 15px;
+  height: 455px;
+
+  &__list {
+    &:first-child {
+      padding-top: 0;
+    }
+    .subslider__item {
+      display: flex;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      &:last-child {
+        border-bottom: none;
+      }
+      img {
+        width: 30%;
+      }
+
+      .subslider__content {
+        margin-left: 20px;
+
+        .subslider__title {
+          text-transform: uppercase;
+          line-height: 18px;
+          margin-bottom: 8px;
+          font: {
+            family: $primary-font;
+            size: 14px;
+            weight: 600;
+          }
+        }
+
+        .subslider__create-day {
+          font: {
+            family: $secondary-font;
+            size: 14px;
+          }
+
+          span {
+            color: $secondary-color;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

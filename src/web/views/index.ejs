@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/metatag.ejs') %>
+
+        <link rel="preload stylesheet" as="style" href="/assets/css/index.css">
+        <link rel="preload stylesheet" as="style" href="/assets/css/components/navbar.css">
+        <link rel="preload stylesheet" as="style" href="/assets/css/components/slider.css">
+        <link rel="preload stylesheet" as="style" href="/assets/css/components/tabs.css">
+        <link rel="preload stylesheet" as="style" href="/assets/css/components/multi-box.css">
+        <link rel="preload stylesheet" as="style" href="/assets/css/components/footer.css">
+
+        <title>Trường THPT Nguyễn Văn Trỗi</title>
+</head>
+
+<body>
+    <div id="root">
+        <header class="header">
+            <div class="header__wrap">
+                <div class="header__login">
+                    <i class="fa-solid fa-right-to-bracket fa-shake"></i>
+                    <a target="_blank" href="http://nvtroi.khanhhoa.edu.vn/page/login">Đăng nhập</a>
+                </div>
+                <ul class="header__list">
+                    <li class="header__item"><a target="_blank" href="https://edu.vpdt.com.vn">Xem công văn</a></li>
+                    <li class="header__item"><a target="_blank" href="https://smas.edu.vn">Tra cứu điểm</a></li>
+                    <li class="header__item"><a target="_blank" href="https://k12online.vn">Học trực tuyến</a></li>
+                    <li class="header__item"><a target="_blank" href="https://web.cloudcam.vn">Xem camera</a></li>
+                    <li class="header__item"><a target="_blank" href="https://smas.edu.vn">Smas</a></li>
+                    <li class="header__item"><a target="_blank" href="http://sgddt.khanhhoa.gov.vn">Website sở GD&DT</a>
+                    </li>
+                    <li class="header__item"><a target="_blank"
+                            href="http://nvtroi.khanhhoa.edu.vn/menutop.html/cong-khai?isFeatured=1">Công khai</a></li>
+                    <li class="header__item"><a target="_blank"
+                            href="http://nvtroi.khanhhoa.edu.vn/page/sitemap">RSS</a></li>
+                </ul>
+                <input type="text" name="" class="header__search" placeholder="Tìm kiếm...">
+            </div>
+        </header>
+        <div class="grid wide">
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/img/bannerSchool.png" id="banner__img">
+                </div>
+                <div class="col l-12 m-12 c-12">
+                    <div class="nav">
+                        <%- include('./partials/navbar.ejs'); %>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="subnav">
+                        <ul class="subnav__list">
+                            <li class="subnav__item" id="real-day"></li>
+                            <li class="subnav__item" id="real-time"></li>
+                        </ul>
+                        <marquee class="subnav__marquee" direction="left">CHÀO MỪNG CÁC BẠN ĐẾN VỚI WEBSITE TRƯỜNG
+                            THPT NGUYỄN VĂN TRỖI</marquee>
+                    </div>
+                </div>
+                <div id="wrapper">
+                    <div class="row">
+                        <div class="col l-8">
+                            <section class="section-box" id="news-events">
+                                <div class="section-box__title">
+                                    <i class="fa-solid fa-newspaper"></i>
+                                    <span>Tin tức - Sự kiện</span>
+                                    <div id="bg-repeat"></div>
+                                </div>
+                                <div class="row">
+                                    <%- include('./partials/slider.ejs'); %>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col l-4">
+                            <section class="section-box" id="tabs">
+                                <%- include('./partials/tabs.ejs') %>
+                            </section>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px" class="row">
+                        <div class="col l-3">
+                            <div class="box-wrap-left">
+                                <section class="section-box" id="picture-ablum">
+                                    <%- include('./partials/picture-ablum.ejs') %>
+                                </section>
+                                <section class="section-box" id="video-ablum">
+                                    <%- include('./partials/video-ablum.ejs') %>
+                                </section>
+                                <section class="section-box" id="statistical">
+                                    <%- include('./partials/statistical.ejs') %>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col l-9">
+                            <div class="box-wrap-right">
+                                <%- include('./partials/multi-box.ejs') %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="row">
+                <div class="col l-12 m-12 c-12">
+                    <%- include('./partials/footer.ejs') %>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/components/slider.js"></script>
+    <script src="/assets/js/components/tabs.js"></script>
+
+</body>
+
+</html>

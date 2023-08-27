@@ -1,0 +1,48 @@
+@import '../base/variables&mixins';
+
+.footer-wrap {
+  $footer: footer;
+  display: flex;
+  flex-direction: column;
+  i {
+    font-size: 16px;
+  }
+  a {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: $primary-color;
+      border-radius: 2px;
+      height: 3px;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      opacity: 0;
+      @include transition(all, 0.5s, ease-in-out);
+    }
+    &:hover::after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  & > * {
+    margin: auto;
+    color: $primary-color;
+    line-height: 28px;
+    font: {
+      size: 14px;
+      family: $primary-font;
+    }
+  }
+  .#{$footer}__content#don-vi-chu-quan {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .#{$footer}__content--bold {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}

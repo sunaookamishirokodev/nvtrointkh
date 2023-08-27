@@ -1,0 +1,123 @@
+@import '../base/variables&mixins';
+$box: box;
+
+.box {
+  &--red {
+    height: $primary-height;
+
+    .#{$box}__title {
+      @include background-gradient(#b40101 50%, #c80101 50%);
+      color: $secondary-color;
+      padding: 10px 0 8px 10px;
+
+      &-text {
+        background-color: $primary-color;
+        border-radius: 8px;
+
+      }
+    }
+
+    .#{$box}__list {
+      margin: 20px 10px;
+      height: calc(415px - 60px);
+
+      .#{$box}__item:first-child {
+        border-top: none;
+      }
+    }
+  }
+}
+
+.box {
+  &--blue {
+    height: calc($primary-height - 65px);
+
+    .#{$box}__title {
+      color: $primary-color;
+      padding: 0 0 8px 10px;
+      border-top: 10px solid $secondary-color;
+
+      &-text {
+        background-color: $secondary-color;
+      }
+    }
+
+    .#{$box}__important {
+      height: 100px;
+      display: flex;
+      margin: 20px 0 0 10px;
+
+      img {
+        height: 90px;
+        width: 150px;
+      }
+
+      &-text {
+        text-transform: uppercase;
+        margin-left: 8px;
+        line-height: 20px;
+
+        font: {
+          size: 14px;
+          weight: 600;
+          family: $primary-font;
+        }
+        a:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+    img {
+      width: 100%;
+    }
+    .#{$box}__list {
+      margin: 0 10px 20px 10px;
+      height: calc($primary-height - 65px - 175px);
+    }
+  }
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 40px;
+
+  &__title {
+    text-transform: uppercase;
+    height: 40px;
+
+    font: {
+      size: 14px;
+      family: $primary-font;
+      weight: 600;
+    }
+
+    &-text {
+      display: inline-block;
+      padding: 14px;
+    }
+  }
+
+  &__list {
+    overflow: hidden scroll;
+    line-height: 18px;
+
+    font: {
+      family: $secondary-font;
+      size: 14px;
+    }
+
+    .#{$box}__item {
+      border-top: 1px solid #ccc;
+      padding: 8px;
+
+      &:hover a {
+        color: $secondary-color;
+      }
+
+      i {
+        margin-right: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import './base/grid';
+@import './base/base';
+@import './base/variables&mixins';
+#root {
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  background-color: $secondary-color;
+
+  &__wrap {
+    @extend %height-primary;
+    justify-content: space-between;
+    max-width: 1200px;
+
+    .header__login {
+      a {
+        text-decoration: inherit;
+        font-size: inherit;
+        color: inherit;
+        text-transform: none;
+        font-weight: 500;
+      }
+
+      i {
+        margin: 0 8px;
+      }
+    }
+
+    .header__list {
+      .header__item {
+        display: inline-block;
+        padding: 0 14px;
+        margin-right: -3px;
+        border-left: 1px solid #4497f7;
+        &:hover {
+          background-color: $primary-color;
+          color: $secondary-color;
+        }
+      }
+
+      :first-child {
+        border: none;
+      }
+    }
+
+    .header__search {
+      width: 200px;
+      padding-left: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+#banner__img {
+  width: 100%;
+  margin-bottom: -3px;
+}
+
+// Navbar header
+.nav {
+  position: sticky;
+  bottom: 0;
+}
+.subnav {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 8px;
+  border-bottom: 1px solid #ccc;
+
+  font: {
+    family: $primary-font;
+    weight: 600;
+    size: 14px;
+  }
+
+  &__list {
+    width: 240px;
+
+    .subnav__item {
+      display: inline-block;
+    }
+  }
+
+  &__marquee {
+    line-height: 30px;
+    color: $secondary-color;
+  }
+}
+
+.section-box#news-events {
+  .section-box__title {
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    i {
+      margin: 0 4px;
+      color: $secondary-color;
+    }
+    span {
+      width: 200px;
+      font-weight: 600;
+      color: $secondary-color;
+    }
+    display: flex;
+    #bg-repeat {
+      margin-top: 6px;
+      width: 100%;
+      background: url('/assets/img/bg-repeat.png') repeat-x;
+      height: 8px;
+    }
+  }
+}
+
+.footer {
+  background-color: $extra-color;
+  margin-top: 40px;
+  padding: 20px 0;
+}
