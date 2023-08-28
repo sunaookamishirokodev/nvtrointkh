@@ -5,11 +5,6 @@
     <%- include('./partials/metatag.ejs') %>
 
         <link rel="preload stylesheet" as="style" href="/assets/css/index.css">
-        <link rel="preload stylesheet" as="style" href="/assets/css/components/navbar.css">
-        <link rel="preload stylesheet" as="style" href="/assets/css/components/slider.css">
-        <link rel="preload stylesheet" as="style" href="/assets/css/components/tabs.css">
-        <link rel="preload stylesheet" as="style" href="/assets/css/components/multi-box.css">
-        <link rel="preload stylesheet" as="style" href="/assets/css/components/footer.css">
 
         <title>Trường THPT Nguyễn Văn Trỗi</title>
 </head>
@@ -38,18 +33,21 @@
                 <input type="text" name="" class="header__search" placeholder="Tìm kiếm...">
             </div>
         </header>
+
         <div class="grid wide">
             <div class="row">
+
                 <div class="col">
-                    <img src="/assets/img/bannerSchool.png" id="banner__img">
+                    <img src="/assets/img/bannerSchool.png" id="banner">
                 </div>
+
                 <div class="col l-12 m-12 c-12">
-                    <div class="nav">
+                    <div class="nav" id="nav">
                         <%- include('./partials/navbar.ejs'); %>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="subnav">
+                <div class="col l-12 m-12 c-12">
+                    <div class="subnav" id="subnav">
                         <ul class="subnav__list">
                             <li class="subnav__item" id="real-day"></li>
                             <li class="subnav__item" id="real-time"></li>
@@ -58,10 +56,10 @@
                             THPT NGUYỄN VĂN TRỖI</marquee>
                     </div>
                 </div>
-                <div id="wrapper">
+                <div id="box__wrapper">
                     <div class="row">
                         <div class="col l-8">
-                            <section class="section-box" id="news-events">
+                            <section class="section-box" id="news-events" title="news-event">
                                 <div class="section-box__title">
                                     <i class="fa-solid fa-newspaper"></i>
                                     <span>Tin tức - Sự kiện</span>

@@ -1,17 +1,16 @@
-@import '../base/variables&mixins';
-
 .nav__wrap {
+  $class: nav;
   @extend %height-primary;
   background-color: $secondary-color;
   width: 100%;
 
-  .nav__home {
+  .#{$class}__home {
     padding: 0 8px;
     background-color: $home-color;
   }
 
-  .nav__list {
-    .nav__item {
+  .#{$class}__list {
+    .#{$class}__item {
       display: inline-block;
       padding: 0 8px;
       &:hover {

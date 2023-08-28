@@ -3,6 +3,12 @@ const WebServer = require('./web/WebServer')
 const webserver = new WebServer()
 
 webserver.setup()
-webserver.https.listen(config.port, () => {
-    console.log(`> App đang chạy tại: ${webserver.url.origin}`)
-})
+if (config.debug) {
+    webserver.https.listen(config.port, () => {
+        console.log(`> App đang chạy tại: ${webserver.url.origin}`)
+    })
+} else {
+    webserver.app.listen(config.port, () => {
+        console.log(`> App đang chạy tại: ${webserver.url.origin}`)
+    })
+} 

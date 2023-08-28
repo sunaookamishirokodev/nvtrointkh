@@ -1,6 +1,6 @@
-@import '../base/variables&mixins';
-$class: box;
 .box {
+  $class: box;
+
   &--red {
     height: $primary-height;
 
@@ -28,6 +28,8 @@ $class: box;
 }
 
 .box {
+  $class: box;
+
   &--blue {
     height: calc($primary-height - 65px);
 
@@ -61,14 +63,17 @@ $class: box;
           weight: 600;
           family: $primary-font;
         }
+
         a:hover {
           color: $secondary-color;
         }
       }
     }
+
     img {
       width: 100%;
     }
+
     .#{$class}__list {
       margin: 0 10px 20px 10px;
       height: calc($primary-height - 65px - 175px);
@@ -77,6 +82,8 @@ $class: box;
 }
 
 .box {
+  $class: box;
+
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 40px;

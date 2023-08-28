@@ -1,12 +1,24 @@
 @import './base/grid';
 @import './base/base';
 @import './base/variables&mixins';
+
+@import './components/footer';
+@import './components/multi-box';
+@import './components/navbar';
+@import './components/slider';
+@import './components/tabs';
+
 #root {
   position: relative;
   overflow: hidden;
 }
+
 .header {
   background-color: $secondary-color;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 
   &__wrap {
     @extend %height-primary;
@@ -33,6 +45,7 @@
         padding: 0 14px;
         margin-right: -3px;
         border-left: 1px solid #4497f7;
+
         &:hover {
           background-color: $primary-color;
           color: $secondary-color;
@@ -53,16 +66,11 @@
   }
 }
 
-#banner__img {
+#banner {
   width: 100%;
   margin-bottom: -3px;
 }
 
-// Navbar header
-.nav {
-  position: sticky;
-  bottom: 0;
-}
 .subnav {
   display: flex;
   justify-content: space-around;
@@ -97,16 +105,20 @@
     font-size: 16px;
     font-family: $primary-font;
     text-transform: uppercase;
+
     i {
       margin: 0 4px;
       color: $secondary-color;
     }
+
     span {
       width: 200px;
       font-weight: 600;
       color: $secondary-color;
     }
+
     display: flex;
+
     #bg-repeat {
       margin-top: 6px;
       width: 100%;

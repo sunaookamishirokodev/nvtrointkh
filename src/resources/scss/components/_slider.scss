@@ -1,7 +1,5 @@
-@import '../base/variables&mixins';
-@import '../base/base';
-
 .slider {
+  $class: slider;
   width: 104%;
   height: calc($primary-height + 40px);
   margin: auto;
@@ -18,7 +16,7 @@
     display: flex;
     transition: 1s ease-in-out;
 
-    .slider__item {
+    .#{$class}__item {
       height: 290px;
 
       img {
@@ -28,12 +26,12 @@
         object-fit: cover;
       }
 
-      .slider__content {
+      .#{$class}__content {
         margin-right: 4px;
         height: 180px;
         background-color: $secondary-color;
 
-        .slider__title {
+        .#{$class}__title {
           @extend %slider-content;
           text-transform: uppercase;
           padding-top: 40px;
@@ -46,7 +44,7 @@
           }
         }
 
-        .slider__create-day {
+        .#{$class}__create-day {
           @extend %slider-content;
           font-size: 14px;
           font-family: $secondary-font;
@@ -54,7 +52,8 @@
       }
     }
   }
-  .slider__dots {
+
+  .#{$class}__dots {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -84,6 +83,7 @@
 }
 
 .subslider {
+  $class: subslider;
   overflow: hidden scroll;
   margin-left: 15px;
   height: 455px;
@@ -92,24 +92,28 @@
     &:first-child {
       padding-top: 0;
     }
-    .subslider__item {
+
+    .#{$class}__item {
       display: flex;
       padding: 15px 0;
       border-bottom: 1px solid #ccc;
+
       &:last-child {
         border-bottom: none;
       }
+
       img {
         width: 30%;
       }
 
-      .subslider__content {
+      .#{$class}__content {
         margin-left: 20px;
 
-        .subslider__title {
+        .#{$class}__title {
           text-transform: uppercase;
           line-height: 18px;
           margin-bottom: 8px;
+
           font: {
             family: $primary-font;
             size: 14px;
@@ -117,7 +121,7 @@
           }
         }
 
-        .subslider__create-day {
+        .#{$class}__create-day {
           font: {
             family: $secondary-font;
             size: 14px;

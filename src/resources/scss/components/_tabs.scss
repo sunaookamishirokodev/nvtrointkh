@@ -1,14 +1,11 @@
-@import '../base/variables&mixins';
-@import '../base/base';
-
 .tabs {
+  $class: tabs;
   margin-top: 20px;
-  $tabs: tabs;
 
   &__header {
     display: flex;
 
-    .#{$tabs}__title {
+    .#{$class}__title {
       @extend %tab-content;
       cursor: pointer;
       user-select: none;
@@ -43,7 +40,7 @@
   }
 
   &__panes#chinh-phu-dien-tu {
-    .#{$tabs}__item {
+    .#{$class}__item {
       border: 1px solid $secondary-color;
       border-radius: 4px;
       padding: 4px;
@@ -60,15 +57,15 @@
         width: 36px;
       }
 
-      .#{$tabs}__text {
+      .#{$class}__text {
         @extend %tab-content;
         padding-left: 6px;
       }
 
-      &.#{$tabs}__item--bg-blue {
+      &.#{$class}__item--bg-blue {
         @include background-gradient(#0963cc, #75b2f9);
 
-        .#{$tabs}__text {
+        .#{$class}__text {
           color: $primary-color;
         }
       }
@@ -76,10 +73,10 @@
   }
 
   &__panes#lich-cong-tac {
-    $scl: scl;
+    $subclass: scl;
     overflow: hidden scroll;
 
-    .#{$scl}__list {
+    .#{$subclass}__list {
       border: 1px solid $background-color;
       padding: 4px;
 
@@ -102,7 +99,7 @@
         }
       }
 
-      .#{$scl}__item {
+      .#{$subclass}__item {
         margin: 4px 0;
         background-color: $background-color;
         font-family: $secondary-font;

@@ -44,5 +44,3 @@ function day() {
   document.getElementById('real-day').innerHTML = `${day}, ${date}/${month}/${year}`
   setTimeout("day()", 3600000)
 }
-
-
