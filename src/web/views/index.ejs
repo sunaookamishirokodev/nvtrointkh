@@ -26,40 +26,39 @@
                     <li class="header__item"><a target="_blank" href="http://sgddt.khanhhoa.gov.vn">Website sở GD&DT</a>
                     </li>
                     <li class="header__item"><a target="_blank"
-                            href="http://nvtroi.khanhhoa.edu.vn/menutop.html/cong-khai?isFeatured=1">Công khai</a></li>
-                    <li class="header__item"><a target="_blank"
                             href="http://nvtroi.khanhhoa.edu.vn/page/sitemap">RSS</a></li>
                 </ul>
                 <input type="text" name="" class="header__search" placeholder="Tìm kiếm...">
             </div>
         </header>
 
-        <div class="grid wide">
+        <div class="container">
             <div class="row">
-
-                <div class="col">
+                <div class="col-12">
                     <img src="/assets/img/bannerSchool.png" id="banner">
                 </div>
 
-                <div class="col l-12 m-12 c-12">
+                <div class="col-12">
                     <div class="nav" id="nav">
                         <%- include('./partials/navbar.ejs'); %>
                     </div>
                 </div>
-                <div class="col l-12 m-12 c-12">
+                <div class="col-12">
                     <div class="subnav" id="subnav">
                         <ul class="subnav__list">
                             <li class="subnav__item" id="real-day"></li>
                             <li class="subnav__item" id="real-time"></li>
                         </ul>
-                        <marquee class="subnav__marquee" direction="left">CHÀO MỪNG CÁC BẠN ĐẾN VỚI WEBSITE TRƯỜNG
-                            THPT NGUYỄN VĂN TRỖI</marquee>
+                        <div class="subnav__marquee">
+                            <marquee direction="left">CHÀO MỪNG CÁC BẠN ĐẾN VỚI WEBSITE TRƯỜNG
+                                THPT NGUYỄN VĂN TRỖI</marquee>
+                        </div>
                     </div>
                 </div>
                 <div id="box__wrapper">
                     <div class="row">
-                        <div class="col l-8">
-                            <section class="section-box" id="news-events" title="news-event">
+                        <div class="col-12 col-xxl-8 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <section class="section-box" id="news-events" title="News Event">
                                 <div class="section-box__title">
                                     <i class="fa-solid fa-newspaper"></i>
                                     <span>Tin tức - Sự kiện</span>
@@ -71,27 +70,35 @@
                             </section>
                         </div>
 
-                        <div class="col l-4">
+                        <div class="col-12 col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                             <section class="section-box" id="tabs">
                                 <%- include('./partials/tabs.ejs') %>
                             </section>
                         </div>
                     </div>
                     <div style="margin-top: 40px" class="row">
-                        <div class="col l-3">
+                        <div class="col-12 col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-12">
                             <div class="box-wrap-left">
-                                <section class="section-box" id="picture-ablum">
-                                    <%- include('./partials/picture-ablum.ejs') %>
-                                </section>
-                                <section class="section-box" id="video-ablum">
-                                    <%- include('./partials/video-ablum.ejs') %>
-                                </section>
-                                <section class="section-box" id="statistical">
-                                    <%- include('./partials/statistical.ejs') %>
-                                </section>
+                                <div class="row">
+                                    <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-6">
+                                        <section class="section-box" id="picture-ablum">
+                                            <%- include('./partials/picture-ablum.ejs') %>
+                                        </section>
+                                    </div>
+                                    <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-6">
+                                        <section class="section-box" id="video-ablum">
+                                            <%- include('./partials/video-ablum.ejs') %>
+                                        </section>
+                                    </div>
+                                    <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <section class="section-box" id="statistical">
+                                            <%- include('./partials/statistical.ejs') %>
+                                        </section>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col l-9">
+                        <div class="col-12 col-xxl-9 col-xl-9 col-lg-8 col-md-12 col-sm-12">
                             <div class="box-wrap-right">
                                 <%- include('./partials/multi-box.ejs') %>
                             </div>
@@ -102,7 +109,7 @@
         </div>
         <footer class="footer">
             <div class="row">
-                <div class="col l-12 m-12 c-12">
+                <div class="col col-xxl-12">
                     <%- include('./partials/footer.ejs') %>
                 </div>
             </div>
@@ -111,7 +118,7 @@
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/components/slider.js"></script>
     <script src="/assets/js/components/tabs.js"></script>
-
+    <script src="/assets/js/components/picture-ablum.js"></script>
 </body>
 
 </html>

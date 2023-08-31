@@ -4,6 +4,7 @@ const compression = require('compression')
 const express = require('express')
 const logger = require('morgan')
 const https = require('https')
+const createError = require('http-errors')
 const cors = require('cors')
 const path = require('path')
 const fs = require('fs')
@@ -42,6 +43,11 @@ class WebServer {
         this.app.get('/', (req, res) => res.render('index'))
 
         this.initialize()
+
+        this.app.use((req, res, next) => next(createError(404)))
+        this.app.use((error, req, res, next) => {
+            res.render('error')
+        })
     }
 
     initialize(filepath = '/') {

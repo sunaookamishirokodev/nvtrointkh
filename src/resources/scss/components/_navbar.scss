@@ -2,17 +2,24 @@
   $class: nav;
   @extend %height-primary;
   background-color: $secondary-color;
+  color: $text-color;
   width: 100%;
 
   .#{$class}__home {
-    padding: 0 8px;
-    background-color: $home-color;
+    padding: 0 12px;
+
+    &:hover {
+      background-color: $hover-color;
+    }
   }
 
   .#{$class}__list {
     .#{$class}__item {
       display: inline-block;
       padding: 0 8px;
+      a {
+        display: inline-block;
+      }
       &:hover {
         background-color: $hover-color;
       }

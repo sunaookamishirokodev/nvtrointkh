@@ -1,6 +1,6 @@
 const config = {
     domain: 'https://nvtrointkh.hop.sh/',
-    debug: false,
+    debug: true,
     port: 8080
 }
 

@@ -22,7 +22,7 @@
 
       &.active {
         cursor: default;
-        color: $primary-color;
+        color: $text-color;
         background-color: rgba($secondary-color, 1);
       }
     }
@@ -31,7 +31,6 @@
   &__panes {
     padding: 8px;
     border: 1px solid $secondary-color;
-    height: calc($primary-height + 40px);
     display: none;
 
     &.active {
@@ -66,7 +65,7 @@
         @include background-gradient(#0963cc, #75b2f9);
 
         .#{$class}__text {
-          color: $primary-color;
+          color: $text-color;
         }
       }
     }
@@ -86,7 +85,7 @@
         background-color: $extra-color;
         border-radius: 2px;
         padding-left: 12px;
-        color: $primary-color;
+        color: $text-color;
         text-transform: uppercase;
 
         font: {

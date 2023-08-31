@@ -143,6 +143,11 @@ table {
 	box-sizing: border-box;
 }
 
+body {
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -151,4 +156,9 @@ a {
 input {
 	outline: none;
 	border: none;
+}
+
+mark {
+	background-color: transparent;
+	color: inherit;
 }

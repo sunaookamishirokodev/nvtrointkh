@@ -2,9 +2,10 @@ $primary-color: #ffffff;
 $secondary-color: #0963cc;
 $extra-color: #137bf5;
 $background-color: #f4f4f5;
+$border-color: #000000;
 $hover-color: #074b9b;
-$home-color: #0857b4;
-$text-color: #ffffff;
+$text-color: #f8fafc;
+$selected-color: #0857b4;
 $primary-height: 415px;
 $primary-font: Arial, Helvetica, sans-serif;
 $secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -75,4 +76,41 @@ $secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-ms-transition: $a $b $c;
 	-o-transition: $a $b $c;
 	-moz-transition: $a $b $c;
+}
+
+@mixin transform($a, $b) {
+	transform: #{$a}($b);
+	-moz-transform: #{$a}($b);
+	-o-transform: #{$a}($b);
+	-ms-transform: #{$a}($b);
+}
+
+@mixin xl {
+	@media (min-width: 1200px) and (max-width: 1399px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: 992px) and (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: 768px) and (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: 576px) and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media (max-width: 576px) {
+		@content;
+	}
 }

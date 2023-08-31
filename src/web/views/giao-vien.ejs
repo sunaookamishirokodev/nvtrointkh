@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/metatag.ejs') %>
+
+    <link rel="preload stylesheet" as="style" href="/assets/css/giao-vien.css">
+
+    <title>Giáo viên</title>
+</head>
+
+<body>
+  <header>
+    <%- include('./partials/navbar.ejs'); %>
+  </header>
+  <div class="grid wide">
+    <div class="row">
+      <div class="col l-12 m-12 c-12">
+        <div class="title"><span>Danh sách giáo viên và hội cha mẹ học sinh</span></div>
+        <div class="container">
+          <ul class="container__tabs">
+            <li class="container__tab active">Tất cả</li>
+            <li class="container__tab">Ban giám hiệu</li>
+            <li class="container__tab">Chi bộ Đảng</li>
+            <li class="container__tab">BCH công đoàn</li>
+            <li class="container__tab">Đoàn thanh niên</li>
+            <li class="container__tab">Hội cha mẹ học sinh</li>
+            <li class="dev-demo"></li>
+          </ul>
+          <ul class="container__panes">
+            <li class="container__pane role-bgh role-cbd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Huỳnh Vĩnh Khang</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Hiệu trưởng - Bí thư</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:hvkhang.c3nvtroi@khanhhoa.edu.vn">hvkhang.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bgh role-cbd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Lương Hồng Quang</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó hiệu trưởng - Chi ủy viên</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:lhquang.c3nvtroi@khanhhoa.edu.vn">lhquang.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bgh role-cbd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Trần Kim Thanh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó hiệu trưởng - Phó bí thư</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:tkthanh.c3nvtroi@khanhhoa.edu.vn">tkthanh.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-cbd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Lê Ngọc Anh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Chi ủy viên</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:lnanh.c3nvtroi@khanhhoa.edu.vn">lnanh.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bchcd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Đỗ Ngọc Ảnh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Chủ tịch</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:dnanh.c3nvtroi@khanhhoa.edu.vn">dnanh.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bchcd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Trương Thị Lại</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó chủ tịch</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:tllai.c3nvtroi@khanhhoa.edu.vn">tllai.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bchcd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Trần Ngọc Thùy Trang</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Ủy viên ban chấp hành</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:tnttrang.c3nvtroi@khanhhoa.edu.vn">tnttrang.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bchcd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Lê Thị Thu Hồng</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Ủy viên ban chấp hành</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:ltthong.c3nvtroi@khanhhoa.edu.vn">ltthong.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-bchcd">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Nguyễn Thị Quỳnh Hoa</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Ủy viên ban chấp hành</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:ntqhoa.c3nvtroi@khanhhoa.edu.vn">ntqhoa.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-dtn">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Nguyễn Đức Tuấn</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Bí thư đoàn trường</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:ndtuan.c3nvtroi@khanhhoa.edu.vn">ndtuan.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-dtn">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Nguyễn Sơn Hải</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó bí thư đoàn trường</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:nshai.c3nvtroi@khanhhoa.edu.vn">nshai.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-dtn">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Nguyễn Thị Hòa</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó bí thư đoàn trường</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:nthoa.c3nvtroi@khanhhoa.edu.vn">nthoa.c3nvtroi@khanhhoa.edu.vn</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-btthcmhs">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Trần Xuân Kỳ</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Trưởng ban đại diện cha mẹ học sinh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:">Không được cung cấp</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-btthcmhs">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Nguyễn Xuân Thành</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó trưởng ban đại diện cha mẹ học sinh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:">Không được cung cấp</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-btthcmhs">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Võ Xuân Hồng</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó trưởng ban đại diện cha mẹ học sinh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:">Không được cung cấp</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="container__pane role-btthcmhs">
+              <img onerror="this.src='/assets/img/error-img.png'" src="">
+              <ul class="container__content">
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Họ và tên:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Nguyễn Công Anh Tú</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Chức vụ:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">Phó trưởng ban đại diện cha mẹ học sinh</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="container__list">
+                  <div class="row">
+                    <div class="col l-6">
+                      <div class="container__item container__item--bold">Email:</div>
+                    </div>
+                    <div class="col l-6">
+                      <div class="container__item">
+                        <a href="mailto:">Không được cung cấp</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <%- include('./partials/footer.ejs') %>
+  </footer>
+  <script src="/assets/js/giao-vien.js"></script>
+</body>
+
+</html>

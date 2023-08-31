@@ -6,5 +6,5 @@ const { Router } = require('express')
  * @arg {Router} router
  */
 module.exports = function (router) {
-    router.get('/', (req, res) => res.render('main'))
+    router.get('/', (req, res) => res.render('gioi-thieu'))
 }

@@ -1,8 +1,48 @@
+@include xl {
+  .subslider, .slider {
+    height: 548px !important;
+  }
+  .slider__item {
+    width: 546px !important;
+  }
+}
+@include lg {
+  .subslider, .slider {
+    height: 490px !important;
+  }
+  .slider__item {
+    width: 456px !important;
+  }
+}
+@include md {
+  .subslider, .slider {
+    height: 532px !important;
+  }
+  .slider__item {
+    width: 520px !important;
+  }
+  .subslider__content {
+    display: none;
+  }
+}
+@include sm {
+  .slider {
+    height: 532px !important;
+  }
+  .slider__item {
+    width: 522px !important;
+  }
+}
+@include xs {
+  .slider {
+    display: none;
+  }
+}
+
 .slider {
   $class: slider;
-  width: 104%;
-  height: calc($primary-height + 40px);
-  margin: auto;
+  width: 100%;
+  height: 442px;
   border: 1px solid #ccc;
   position: relative;
   overflow: hidden;
@@ -10,20 +50,18 @@
   &__list {
     position: absolute;
     width: max-content;
-    height: 100%;
     left: 0;
     top: 0;
+    bottom: 0;
     display: flex;
     transition: 1s ease-in-out;
 
     .#{$class}__item {
-      height: 290px;
+      width: 416px;
+      display: block;
 
       img {
-        margin-right: 4px;
-        margin-bottom: 4px;
-        height: 92%;
-        object-fit: cover;
+        width: 100%;
       }
 
       .#{$class}__content {
@@ -34,13 +72,16 @@
         .#{$class}__title {
           @extend %slider-content;
           text-transform: uppercase;
-          padding-top: 40px;
-          padding-bottom: 10px;
+          padding: 30px 10px 8px 8px;
 
           font: {
             size: 14px;
             weight: 600;
             family: $primary-font;
+          }
+
+          a {
+            color: $text-color;
           }
         }
 
@@ -48,6 +89,7 @@
           @extend %slider-content;
           font-size: 14px;
           font-family: $secondary-font;
+          color: $text-color;
         }
       }
     }
@@ -57,7 +99,7 @@
     position: absolute;
     bottom: 10px;
     left: 0;
-    color: #fff;
+    color: $primary-color;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -71,7 +113,7 @@
       background-color: #fff;
       margin: 10px;
       border-radius: 20px;
-      transition: 0.5s;
+      @include transition(all, 0.5s, ease-in-out);
       cursor: pointer;
 
       &.active {
@@ -86,7 +128,7 @@
   $class: subslider;
   overflow: hidden scroll;
   margin-left: 15px;
-  height: 455px;
+  height: 442px;
 
   &__list {
     &:first-child {
@@ -103,7 +145,7 @@
       }
 
       img {
-        width: 30%;
+        width: 120px;
       }
 
       .#{$class}__content {

@@ -31,7 +31,7 @@
   $class: box;
 
   &--blue {
-    height: calc($primary-height - 65px);
+    height: calc($primary-height - 62px);
 
     .#{$class}__title {
       color: $primary-color;
@@ -55,7 +55,7 @@
 
       &-text {
         text-transform: uppercase;
-        margin-left: 8px;
+        margin: 0 8px;
         line-height: 20px;
 
         font: {
