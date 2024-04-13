@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "nodemon --inspect src/index.js",
-    "build": "sass -w src/resources/scss:src/web/public/assets/css"
   },
   "keywords": [],
   "author": "",
